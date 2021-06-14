@@ -37,8 +37,8 @@ Atenção: ao clonar um projeto, é necessario rodar o comando:
  
 ## ROTAS  
   
-  Ao acessar a rota raiz (get) /api é criado via 'factory' um usuário 'Customer' e um 'Storekeeper'.  
-  Para efetuar uma transação, acessar (post) /api/transaction.  
+  Ao acessar a rota raiz (get) '/api', é criado via 'factory' um usuário 'Customer' e um 'Storekeeper'.  
+  Para efetuar uma transação, acessar (post) '/api/transaction'.  
   dados de exemplo para transferência:  
   ```json
 {

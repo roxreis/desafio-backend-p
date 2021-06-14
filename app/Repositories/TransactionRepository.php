@@ -25,11 +25,11 @@ class TransactionRepository
     }
  
     if ($this->checkOrderIsASelfPayment($data)){
-      throw new TransactionDeniedException('You can not self payment', 422);
+      throw new TransactionDeniedException('You can not self payment', 401);
     }
  
     if ($this->checkWhoBeOrderPayee($data)) {
-      throw new TransactionDeniedException('You can not be able make payments, just receive.', 422);
+      throw new TransactionDeniedException('You can not be able to make payments, just receive.', 401);
     }
 
     $payerWallet = $this->getWalletCustomer($data);
@@ -37,7 +37,7 @@ class TransactionRepository
 
   
     if (!$this->checkUserBalance($payerWallet, $data['value'])) {
-      throw new InsufficientBalanceException('You dont have this value to transfer.', 422);
+      throw new InsufficientBalanceException('Insufficient balance to this transfer.', 422);
     }
 
     if (!$this->isServiceAbleToMakeTransaction()) {
