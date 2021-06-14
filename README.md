@@ -34,6 +34,11 @@ Atenção: ao clonar um projeto Lararel Sail, é necessario rodar o comando:
     -w /opt \
     laravelsail/php80-composer:latest \
     composer install --ignore-platform-reqs    
+    
+## MIGRATIONS
+
+rodar o comando 'sail artisan migrate(LARAVEL SAIL)'    
+rodar o comando 'php artisan migrate(LARAVEL)'  
  
 ## ROTAS  
   
