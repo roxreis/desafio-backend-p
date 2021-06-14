@@ -39,7 +39,7 @@ Atenção: ao clonar um projeto Lararel Sail, é necessario rodar o comando:
   
   Ao acessar a rota (get) 'localhost/api', é criado via 'factory' um usuário 'Customer' e um 'Storekeeper'.  
   Para efetuar uma transação, acessar (post) 'localhost/api/transaction'.      
-  **Laravel sail gera um servidor automático no http://localhost/, porém se for rodar no Laravel local ou no docker, é necessario subir o servidor embutido do Laravel e a rota        principal passa a ser http://localhost:8000/    
+  **Laravel sail gera um servidor automático no http://localhost/, porém se for rodar somente Laravel local ou no docker, é necessario subir o servidor embutido do Laravel e a rota        principal passa a ser http://localhost:8000/    
   
   dados de exemplo para transferência:  
   ```json
