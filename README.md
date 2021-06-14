@@ -18,11 +18,35 @@ Requisitos:
 
 - No recebimento de pagamento, o usuário ou lojista precisa receber notificação (envio de email, sms) enviada por um serviço de terceiro e eventualmente este serviço pode estar indisponível/instável. Use este mock para simular o envio (http://o4d9z.mocklab.io/notify). 
 
-- Este serviço deve ser RESTFul.
+- Este serviço deve ser RESTFul.  
 
 
 
+## Docker Laravel Sail  
 
+doc: https://laravel.com/docs/8.x/sail  
+
+Atenção: ao clonar um projeto, é necessario rodar o comando:  
+  
+  docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/opt \
+    -w /opt \
+    laravelsail/php80-composer:latest \
+    composer install --ignore-platform-reqs    
+ 
+## ROTAS  
+  
+  Ao acessar a rota raiz (get) /api é criado via 'factory' um usuário 'Customer' e um 'Storekeeper'.  
+  Para efetuar uma transação, acessar (post) /api/transaction.  
+  dados de exemplo para transferência:  
+  ```json
+{
+    "value" : 100.00,
+    "payer" : 4,
+    "payee" : 15
+}
+```        
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
