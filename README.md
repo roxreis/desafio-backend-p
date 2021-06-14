@@ -37,8 +37,10 @@ Atenção: ao clonar um projeto, é necessario rodar o comando:
  
 ## ROTAS  
   
-  Ao acessar a rota raiz (get) '/api', é criado via 'factory' um usuário 'Customer' e um 'Storekeeper'.  
-  Para efetuar uma transação, acessar (post) '/api/transaction'.  
+  Ao acessar a rota (get) 'localhost/api', é criado via 'factory' um usuário 'Customer' e um 'Storekeeper'.  
+  Para efetuar uma transação, acessar (post) 'localhost/api/transaction'.  
+  **Laravel sail gera um servido automatico no http://localhost/ -- se for rodar no Laravel direto no docker, é necessario subir o servidor embutido do Laravel e a rota        principal passa a ser http://localhost:8000/    
+  
   dados de exemplo para transferência:  
   ```json
 {
