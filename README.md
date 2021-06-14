@@ -26,7 +26,7 @@ Requisitos:
 
 doc: https://laravel.com/docs/8.x/sail  
 
-Atenção: ao clonar um projeto, é necessario rodar o comando:  
+Atenção: ao clonar um projeto Lararel Sail, é necessario rodar o comando:  
   
   docker run --rm \
     -u "$(id -u):$(id -g)" \
