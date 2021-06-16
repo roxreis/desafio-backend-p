@@ -26,15 +26,6 @@ Requisitos:
 
 doc: https://laravel.com/docs/8.x/sail  
 
-Atenção: ao clonar um projeto Lararel Sail, é necessario rodar o comando:  
-  
-  docker run --rm \
-    -u "$(id -u):$(id -g)" \
-    -v $(pwd):/opt \
-    -w /opt \
-    laravelsail/php80-composer:latest \
-    composer install --ignore-platform-reqs    
-    
 ## MIGRATIONS
 
 rodar o comando 'sail artisan migrate' (LARAVEL SAIL)    
