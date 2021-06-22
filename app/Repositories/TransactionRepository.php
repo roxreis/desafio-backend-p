@@ -34,8 +34,7 @@ class TransactionRepository
 
     $payerWallet = $this->getWalletCustomer($data);
     $payeeWallet = $this->getWalletStorekeeper($data);
-
-  
+    
     if (!$this->checkUserBalance($payerWallet, $data['value'])) {
       throw new InsufficientBalanceException('Insufficient balance to this transfer.', 422);
     }
@@ -103,15 +102,17 @@ class TransactionRepository
   public function orderToCreateWalletCustomer($data)
   {
     $payerWallet = new Wallet;
-    return $payerWallet->createCustomerWallet($data);
+    $payerWallet = $payerWallet->createCustomerWallet($data);
+    return $payerWallet = Wallet::where('user_id',$data['payer_id'])->first(); 
      
   }
 
   public function orderToCreateWalletStorekeeper($data)
   {
     $payeeWallet = new Wallet;
-    return $payeeWallet->createStorekeeperWallet($data);
-     
+    $payeeWallet = $payeeWallet->createStorekeeperWallet($data);
+    return $payeeWallet = Wallet::where('user_id',$data['payee_id'])->first();  
+          
   }
 
   private function checkUserBalance(Wallet $payerWallet, $value)
