@@ -22,7 +22,19 @@ Requisitos:
 
 
 
-## Docker Laravel Sail  
+## Docker Laravel Sail
+
+INSTALAÇÃO (comandos)    
+
+composer require laravel/sail --dev 
+
+php artisan key:generate
+
+php artisan sail:install (instalar Mysql)  
+
+alias sail='bash vendor/bin/sail'
+
+sail up -d
 
 doc: https://laravel.com/docs/8.x/sail  
 
